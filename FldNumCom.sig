@@ -1,0 +1,13 @@
+177,0
+T,FldNumCom,-,0
+A,FldNumCom,5,UnembeddedFld,MagmaEmbedding,CConj,Embeds,HashableLabel
+S,cFldNumCom,,0,1,0,0,0,0,0,0,0,-24,,FldNumCom,-38,-38,-38,-38,-38
+S,EvaluateMarkedEmbedding,input: x - an element of a field K - a FldNumCom wrapping the parent field of x Precision - precision returns: the evaluation of x under the marked embedding of K to the precision Precision,0,2,0,0,0,0,0,0,0,FldNumCom,,0,0,-25,,172,-38,-38,-38,-38,-38
+S,DefaultMarkedEmbedding,"input: K: a number field or the rationals returns: A distinguished infinite place of K. By default, this is the first infinite place. This function is here so that whenever we choose a distinguished place of K, we make the same choice",0,1,0,0,0,0,0,0,0,-24,,332,-38,-38,-38,-38,-38
+S,IsSubfield,"input: K - A FldNumCom wrapping the unembedded field K_u L - A FldNumCom wrapping the unembedded field L_u returns: (true, phi) if there is a field embedding phi: K_u -> L_u which commutes with the marked embeddings of K_u and L_u into the complex numbers given by K and L. (false, _) otherwise",0,2,0,0,0,0,0,0,0,FldNumCom,,0,0,FldNumCom,,36,175,-38,-38,-38,-38
+S,IsCoercible,"inputs: L - FldNumCom into which x should be coerced x - Element to coerce into L, should be one of FldNumElt, FldRatElt, FldQuadelt, FldCycElt K - FldNumCom which should be viewed as the parent of x returns: y in L such that the evaluation of y under the marked embedding of L is equal to the evaluation of x under the marked embedding of K. This is somewhat awkward as written (there shouldn't be a need for an argument K, as it should really just be ""Parent(x)"") because the Parent of a FldNumElt is a FldNum (not a FldNumCom) and I didn't want to create a new element type just for the sake of this function",0,3,0,0,0,0,0,0,0,FldNumCom,,0,0,-1,,0,0,FldNumCom,,36,-25,-38,-38,-38,-38
+S,Compositum,"Given two FldNumComs, returns a FldNumCom M whose image under its marked embedding contains the images of K and L under their respective embeddings",0,2,0,0,0,0,0,0,0,FldNumCom,,0,0,FldNumCom,,FldNumCom,-38,-38,-38,-38,-38
+S,IsGalois,IsNormal fails if the defining polynomial of F has non-integral coefficients,0,1,0,0,0,0,0,0,0,-9,,36,-38,-38,-38,-38,-38
+S,DefiningPolyCoeffs,,0,1,0,0,0,0,0,0,0,-24,,82,-38,-38,-38,-38,-38
+S,EmbedLabel,"Given a number field K and a place v, returns a Gaussian integer key specifying the place by specifying the evaluation of the primitive element under v",0,1,0,0,0,0,0,0,0,-1,,172,-38,-38,-38,-38,-38
+S,MinDistBtwnRoots,Returns the minimum absolute value distance between two roots of the defining polynomial of K,0,1,0,0,0,0,0,0,0,27,,402,-38,-38,-38,-38,-38
